@@ -8,6 +8,7 @@
     - Applications/Python 3.xx
     - brew install python3
     - pyenv install 3.11.4
+    - pip install --upgrade pip
 - Setting up a Python development environment
     - commandline -> python3
     - pip3 install notebook -> jupyter notebook

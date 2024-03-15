@@ -1,10 +1,3 @@
-str1 = 'Hello how are you'
-str2 = "Hello how are you"
-str3 = 'multiline' + 'string';
-print(str1)
-print(str2)
-print(str3)
-
 f = 'data'
 s = 'structure'
 print(f + s)
@@ -17,8 +10,6 @@ print(st * 3)
 # 'data.data.data.'
 print(3 * st)
 # 'data.data.data.'
-
-###### Range ######
 
 print(list(range(10)))
 print(range(10))
@@ -34,14 +25,29 @@ print(list(range(20, 10, -2)))
 # [1, 3, 5, 7, 9]
 # [20, 18, 16, 14, 12]
 
-###### Lists ######
-
 a = ['food', 'bus', 'apple', 'queen']
 print(a)
 # ['food', 'bus', 'apple', 'queen']
-
 
 mylist = [10, "India", "world", 8]
 # accessing elements in list.
 print(mylist[1])
 # India
+
+[10, 12, 31, 14] == [14, 10, 31, 12]
+print([10, 12, 31, 14] == [14, 10, 31, 12])
+# False
+
+b = ['data', 'and', 'book', 'structure', 'hello', 'st']
+
+b += [32]
+print(b)
+# ['data', 'and', 'book', 'structure', 'hello', 'st', 32]
+
+b[2:3] = []
+print(b)
+# ['data', 'and', 'structure', 'hello', 'st', 32]
+
+del b[0]
+print(b)
+# ['and', 'structure', 'hello', 'st', 32]

@@ -1,24 +1,3 @@
-###### Ordered List ######
-[10, 12, 31, 14] == [14, 10, 31, 12]
-print([10, 12, 31, 14] == [14, 10, 31, 12])
-# False
-
-###### Dynamic List ######
-b = ['data', 'and', 'book', 'structure', 'hello', 'st']
-
-b += [32]
-print(b)
-# ['data', 'and', 'book', 'structure', 'hello', 'st', 32]
-
-
-b[2:3] = []
-print(b)
-# ['data', 'and', 'structure', 'hello', 'st', 32]
-
-del b[0]
-print(b)
-# ['and', 'structure', 'hello', 'st', 32]
-
 a = [2.2, 'python', 31, 14, 'data', False, 33.59]
 print(a)
 # [2.2, 'python', 31, 14, 'data', False, 33.59]
@@ -38,3 +17,38 @@ print(a[1:5])
 
 print(a[-3:-1])
 ['python', 'happy']
+
+a = ['data', 'and', 'book', 'structure', 'hello', 'st']
+print(a)
+['data', 'and', 'book', 'structure', 'hello', 'st']
+a[1] = 1
+a[-1] = 120
+print(a)
+['data', 1, 'book', 'structure', 'hello', 120]
+
+a = ['data', 'and', 'book', 'structure', 'hello', 'st']
+
+print(a[2:5])
+['book', 'structure', 'hello']
+a[2:5] = [1, 2, 3, 4, 5]
+print(a)
+['data', 'and', 1, 2, 3, 4, 5, 'st']
+
+a = ['data', 'structures', 'using', 'python', 'happy', 'learning']
+print('data' in a)
+# True
+
+print(a)
+# ['data', 'structures', 'using', 'python', 'happy', 'learning']
+
+a + ['New', 'elements']
+print(a)
+# ['data', 'structures', 'using', 'python', 'happy', 'learning', 'New', 'elements']
+
+print(a * 2)
+# ['data', 'structures', 'using', 'python', 'happy', 'learning', 'New', 'elements', 'data', 'structures', 'using',
+# 'python', 'happy', 'learning', 'New', 'elements']
+
+print(len(a))
+# 6
+print(min(a))

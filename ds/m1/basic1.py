@@ -6,8 +6,6 @@ print(type(q))
 print(type(r))
 print(type(12 + 31j))
 
-###############
-
 var = 13.2
 print(type(var))
 # 13.2
@@ -22,8 +20,6 @@ type(var)
 var = 13.2
 print(var)
 # 13.2
-
-#############
 
 print(type(bool(22)))
 print(type(True))
@@ -49,3 +45,10 @@ print(bool(va2))
 va3 = -2.3
 print(bool(va3))
 # True
+
+str1 = 'Hello how are you'
+str2 = "Hello how are you"
+str3 = 'multiline' + 'string';
+print(str1)
+print(str2)
+print(str3)

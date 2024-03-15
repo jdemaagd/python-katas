@@ -1,12 +1,10 @@
-################ Counter Objects ###########
-
 from collections import Counter
+from collections import UserString
 
 inventory = Counter('hello')
 print(inventory)
 Counter({'l': 2, 'h': 1, 'e': 1, 'o': 1})
 
-############### UserDict #############
 '''
 from collections import UserDict  
 class MyDict(UserDict):  
@@ -22,7 +20,6 @@ File "<string>", line 6, in push
 RuntimeError: Cannot insert
 '''
 
-######### UserList ###########
 '''
 from collections import UserList  
 class MyList(UserList):  
@@ -39,12 +36,8 @@ Traceback (most recent call last):
 RuntimeError: Cannot insert in the list
 '''
 
-######### UserString ##########
 
 # create a custom append function for string
-from collections import UserString
-
-
 class MyString(UserString):
     def append(self, value):
         self.data += value

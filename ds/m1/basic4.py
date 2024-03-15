@@ -1,41 +1,3 @@
-######### Mutable ####
-a = ['data', 'and', 'book', 'structure', 'hello', 'st']
-print(a)
-['data', 'and', 'book', 'structure', 'hello', 'st']
-a[1] = 1
-a[-1] = 120
-print(a)
-['data', 1, 'book', 'structure', 'hello', 120]
-
-a = ['data', 'and', 'book', 'structure', 'hello', 'st']
-
-print(a[2:5])
-['book', 'structure', 'hello']
-a[2:5] = [1, 2, 3, 4, 5]
-print(a)
-['data', 'and', 1, 2, 3, 4, 5, 'st']
-
-######### Other operators ####
-a = ['data', 'structures', 'using', 'python', 'happy', 'learning']
-print('data' in a)
-# True
-
-print(a)
-# ['data', 'structures', 'using', 'python', 'happy', 'learning']
-
-a + ['New', 'elements']
-print(a)
-# ['data', 'structures', 'using', 'python', 'happy', 'learning', 'New', 'elements']
-
-print(a * 2)
-# ['data', 'structures', 'using', 'python', 'happy', 'learning', 'New', 'elements', 'data', 'structures', 'using', 'python', 'happy', 'learning', 'New', 'elements']
-
-print(len(a))
-# 6
-print(min(a))
-
-############ Membership operators
-
 # using 'in' operator
 mylist1 = [100, 20, 30, 40]
 mylist2 = [10, 50, 60, 90]
@@ -46,3 +8,45 @@ else:
 
 # Output:
 # elements are not overlapping
+
+val = 104
+mylist = [100, 210, 430, 840, 108]
+if val not in mylist:
+    print("val is NOT present in mylist")
+else:
+    print("val is  present in mylist")
+
+# Output:
+# val is NOT present in mylist
+
+list1 = []
+list2 = []
+if list1 == list2:
+    print("Both are equal")
+else:
+    print("Both are not equal")
+if list1 is list2:
+    print("Both variables are pointing to the same object")
+else:
+    print("Both variables are not pointing to the same object")
+thirdList = list1
+if thirdList is list2:
+    print("Both are pointing to the same object")
+else:
+    print("Both are not pointing to the same object")
+'''
+Output:
+Both are equal	
+Both variables are not pointing to the same object
+Both are pointing to the same object
+'''
+
+list3 = []
+list4 = []
+if list3 is not list4:
+    print("Both list3 and list4 variables are the same object")
+else:
+    print("Both list3 and list4 variables are not the same object")
+
+# Output:
+# Both list3 and list4 variables are the same object
