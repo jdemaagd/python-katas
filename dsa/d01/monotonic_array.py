@@ -12,6 +12,8 @@ def brute_monotonic(arr):
     return increasing or decreasing
 
 
+# Time complexity: O(n)
+# Space complexity: O(1)
 def monotonic_array(arr):
     n = len(arr)
     if (n == 0) or (n == 1):

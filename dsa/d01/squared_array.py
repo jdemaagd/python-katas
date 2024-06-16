@@ -18,13 +18,13 @@ def two_pointer_squared(array):
     result = [0] * size
 
     for k in reversed(range(size)):
-        i_squared = array[start] ** 2
-        j_squared = array[end] ** 2
-        if i_squared > j_squared:
-            result[k] = i_squared
+        start_squared = array[start] ** 2
+        end_squared = array[end] ** 2
+        if start_squared > end_squared:
+            result[k] = start_squared
             start += 1  # move starting pointer towards the end of array
         else:
-            result[k] = j_squared
+            result[k] = end_squared
             end -= 1    # move ending pointer towards the start of array
 
     return result
