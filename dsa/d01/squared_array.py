@@ -30,7 +30,5 @@ def two_pointer_squared(array):
     return result
 
 
-squares = brute_squared([1, 2, 3, 4, 5])
-print(squares)  # [1, 4, 9, 16, 25]
-
-print(two_pointer_squared([-5, -4, -2, 1, 9, 12]))
+print(brute_squared([1, 2, 3, 4, 5]))                   # [1, 4, 9, 16, 25]
+print(two_pointer_squared([-5, -4, -2, 1, 9, 12]))      # [1, 4, 16, 25, 81, 144]

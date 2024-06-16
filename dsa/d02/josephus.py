@@ -34,5 +34,5 @@ def approach3(n, k):    # improve space complexity of recursive call stack
     return survivor + 1
 
 
-print(approach3(5, 2))
-print(approach3(6, 5))
+print(approach3(5, 2))  # 3
+print(approach3(6, 5))  # 1

@@ -17,5 +17,5 @@ def kth_symbol(n, k):
         return 1 - kth_symbol(n - 1, k - mid)
 
 
-print(kth_symbol(3, 3))
-print(kth_symbol(4, 7))
+print(kth_symbol(3, 3))     # 1
+print(kth_symbol(4, 7))     # 0

@@ -38,8 +38,8 @@ def monotonic_array(arr):
     return True
 
 
-print(monotonic_array([1, 2, 2, 3]))  # True
-print(monotonic_array([3, 3, 3]))  # True
-print(monotonic_array([7]))  # True
-print(monotonic_array([]))  # True
-print(monotonic_array([2, 2, 3, 1]))  # False
+print(monotonic_array([1, 2, 2, 3]))    # True
+print(monotonic_array([3, 3, 3]))       # True
+print(monotonic_array([7]))             # True
+print(monotonic_array([]))              # True
+print(monotonic_array([2, 2, 3, 1]))    # False
