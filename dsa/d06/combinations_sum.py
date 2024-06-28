@@ -22,13 +22,17 @@ def combination_sum(candidates, target):
         if curr_sum == target:
             res.append(curr[:])
             return
+
         for j in range(index, n):
             curr.append(candidates[j])
             helper(j, curr, curr_sum + candidates[j])
             curr.pop()                                  # backtracking step
 
     helper(0, [], 0)
+
     return res
 
 
 print(combination_sum([2, 3, 6, 7], 7))
+print(combination_sum([2, 3, 4, 3, 5], 8))
+# [[2, 2, 2, 2], [2, 2, 4], [2, 3, 3], [2, 3, 3], [2, 3, 3], [3, 5], [4, 4], [3, 5]]
