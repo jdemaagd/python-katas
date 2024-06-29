@@ -8,6 +8,8 @@ Identify DP problem:
 Choice: at each step, we can take 1 or 2 steps
 Notice overlapping subproblems
 Application of Fibonacci
+
+NOTE: Time/Space Complexity is same as Fibonacci Sequence
 """
 
 
@@ -22,7 +24,7 @@ def climb_stairs_recursive(n):
 memo = {0: 0, 1: 1, 2: 2}
 
 
-# Step 2: memoization/top-down approach
+# Step 2: memoization/top-down DP approach
 def climb_stairs_memo(n):
     if n in memo:
         return memo[n]
@@ -31,7 +33,7 @@ def climb_stairs_memo(n):
         return memo[n]
 
 
-# Step 3: tabulation/bottom-up approach
+# Step 3: tabulation/bottom-up DP approach
 def climb_stairs_tab(n: int):
     if n == 0 or n == 1:
         return 1
@@ -53,17 +55,17 @@ def climb_stairs_space_optimized(n: int):
     if n == 0 or n == 1:
         return 1
 
-    prev1, prev2 = 1, 1
+    curr, prev = 1, 1
 
-    # Calculate the number of ways to reach from step 2 to n
     for _ in range(2, n + 1):
-        curr = prev1 + prev2  # Current step is the sum of the previous two steps
-        prev2 = prev1  # Move prev2 to the previous step
-        prev1 = curr  # Move prev1 to the current step
+        nxt = curr + prev
+        prev = curr
+        curr = nxt
 
-    return prev1
+    return curr
 
 
+# Alternative recursive solution
 def climb_stairs(n):
     if n < 3:
         return n

@@ -25,7 +25,7 @@ def fib_recursive(n):
 memo = {0: 0, 1: 1}
 
 
-# Step 2: memoization/top-down approach
+# Step 2: memoization/top-down DP approach
 # Time Complexity: O(n), n operations, retrieve every next value from hash/dict
 # Space Complexity: O(n), hash table stores order of n, recursion call stack is order of n
 def fib_memo(n):
@@ -36,7 +36,7 @@ def fib_memo(n):
         return memo[n]
 
 
-# Step 3: tabulation/bottom-up approach
+# Step 3: tabulation/bottom-up DP approach
 # Time Complexity: O(n), n operations
 # Space Complexity: O(n), 1d table array of size n
 def fib_tab(n):
