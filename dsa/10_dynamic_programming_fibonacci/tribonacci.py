@@ -6,6 +6,8 @@ Given n, return the value of Tn.
 
 
 # Step 1: recursive solution
+# Time Complexity: O(3^n), each call potentially leads to 3 more calls
+# Space Complexity: O(n), recursive call stack
 def trib_recursive(n):
     if n == 0:
         return 0
@@ -16,6 +18,8 @@ def trib_recursive(n):
 
 
 # Step 2: memoization/top-down DP approach
+# Time Complexity: O(n), compute once and store for each n (index)
+# Space Complexity: O(n), max depth recursive call stack is n
 def trib_memo(n):
     memo = [-1] * (n + 1)
 
@@ -36,6 +40,8 @@ def trib_memo(n):
 
 
 # Step 3: tabulation/bottom-up DP approach
+# Time Complexity: O(n), compute once and store for each n (index)
+# Space Complexity: O(n), store n + 1 elements in array
 def trib_tab(n):
     if n == 0:
         return 0
@@ -52,6 +58,8 @@ def trib_tab(n):
 
 
 # Step 4: tabulation with space optimization
+# Time Complexity: O(n), compute once and store for each n (index)
+# Space Complexity: O(1), store only 3 elements
 def tribonacci(n):
     zero = 0
     one = 1
