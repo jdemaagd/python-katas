@@ -18,15 +18,28 @@ Constraints:
     1 <= n <= 9
 
 Observations:
+0. filling row by row
 1. only one queen per row
+2. check col up to current row (cols above row)
+3. check top-left diagonal
+4. check top-right diagonal
 """
 
 
-# Time Complexity: O(n!)
-#   row 1 -> n, row 2 -> n - 2, row 3 -> n - 4, etc.
-#   roughly -> n!, not O(n^n) because of pruning
-# Space Complexity: O(n^2), hold state of board -> n x n = n^2
-#   recursive call stack will take order of n, we take n^2 as the dominating factor
+# Time Complexity Analysis -> 𝑂(𝑛!)
+#     row 1 -> n
+#     row 2 -> n - 2
+#     row 3 -> n - 4
+#     upper bound can be taken as n!
+#     notice that it's not n^n because of pruning
+#     we're not filling queens in all the positions in all the rows
+#     whenever we encounter a scenario that is not valid, we prune that branch
+# Space Complexity Analysis -> 𝑂(𝑛^2)
+#     as we build solutions we have to hold state of board (n x n)
+#     we know that every row will have only 1 queen
+#     so recursive call stack will take the order of n
+#     we take the dominant term which is n^2 over n
+# NOTE: space used just to return output is not counted as auxiliary space and not counted in space complexity
 def solve_n_queens(n):
     res = []
     # board is a list of lists

@@ -28,3 +28,8 @@
 - NOT for optimization problems (dynamic programming)
 - If a problem requires you to explore every possible path
 - There are multiple solutions to a problem, and you want all of them
+
+## NOTE
+
+- Backtracking is a brute-force technique
+- It's more optimized than normal brute-force because of backtracking

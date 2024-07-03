@@ -17,42 +17,42 @@ Constraints:
 
 
 # Time Complexity: O(1), as board size is fixed
-#                  # operations bound by 9^(# of empty cells), max 9^81
-# Space Complexity: O(1), worst case -> O(81), constant space
+#     operations bound by 9^(# of empty cells), max 9^81
+# Space Complexity: O(1), no n to track
+#     max depth of recursion stack can be at most 81
 def solve_sudoku(board):
     # function modifies board in place, hence there is no need to return the board
 
     def is_valid(row, col, num):
         for x in range(9):
-            if board[x][col] == num or board[row][x] == num:  # check row and column
+            # check row and column
+            if board[x][col] == num or board[row][x] == num:
                 return False
 
-            # calculate start row and column index for 3 x 3 sub-box
+            # calculations to see board in a 3 x 3 sub-grid
             r = 3 * (row // 3) + x // 3
             c = 3 * (col // 3) + x % 3
-            if board[r][c] == num:     # check 3 x 3 sub-box
+            if board[r][c] == num:
                 return False
 
         return True     # valid `num`
 
-    def helper():
+    def fill_board():
         for row in range(9):
             for col in range(9):
-                if board[row][col] == '.':     # identify next empty cell
+                if board[row][col] == '.':                  # identify next empty cell
                     for num in '123456789':
                         if is_valid(row, col, num):
-                            board[row][col] = num      # place number in cell
-
-                            if helper():
+                            board[row][col] = num           # choose step
+                            if fill_board():
                                 return True
+                            board[row][col] = '.'           # backtracking step
 
-                            board[row][col] = '.'  # backtracking step
-
-                    return False    # require backtrack no numbers were valid (1 - 9)
+                    return False    # need to backtrack no numbers (1 - 9) were valid
 
         return True    # valid sudoku board
 
-    helper()
+    fill_board()
 
     return board
 
