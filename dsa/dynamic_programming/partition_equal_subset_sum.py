@@ -32,3 +32,8 @@ def can_partition(nums):
         prev = curr[:]
 
     return curr[target]
+
+
+print(can_partition([1, 5, 11, 5]))
+print(can_partition([1, 2, 3, 5]))
+print(can_partition([1, 2, 3, 4, 5, 6, 7]))

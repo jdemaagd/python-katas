@@ -28,3 +28,10 @@ def find_target_sum(nums, target):
         return dp[index][sum_nums + summation]
 
     return helper(n - 1, 0)
+
+
+print(find_target_sum([1, 1, 1, 1, 1], 3))
+print(find_target_sum([1], 1))
+print(find_target_sum([1, 2, 3, 4, 5], 5))
+print(find_target_sum([1, 2, 3, 4, 5], 10))
+

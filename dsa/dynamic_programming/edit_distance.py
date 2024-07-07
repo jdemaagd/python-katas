@@ -136,4 +136,4 @@ print(min_distance_tab("table", "bel"))  # 3
 print()
 print(min_distance_space_optimized("horse", "ros"))  # 3
 print(min_distance_space_optimized("intention", "execution"))  # 5
-print(min_distance_space_optimized("table", "bel"))  # 3
+print(min_distance_space_optimized("table", "bel"))  # 3    TODO: wrong solution!
