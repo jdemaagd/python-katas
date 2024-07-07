@@ -22,16 +22,15 @@ def bubble_sort_for(arr):
 
 def bubble_sort_while(arr):
     is_sorted = False
-    counter = 0
+    track_pass = 0
 
     while not is_sorted:
         is_sorted = True
-        # using counter to track pass and decrement array length
-        for i in range(len(arr) - 1 - counter):
+        for i in range(len(arr) - 1 - track_pass):
             if arr[i] > arr[i + 1]:
                 arr[i], arr[i + 1] = arr[i + 1], arr[i]
                 is_sorted = False
-        counter += 1
+        track_pass += 1
 
     return arr
 
