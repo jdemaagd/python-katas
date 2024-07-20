@@ -2,7 +2,7 @@
 You are provided with a set of N items, each with a specified weight and value.
 Your objective is to pack these items into a backpack with a weight limit of W,
   maximizing the total value of items in the backpack.
-Specifically, you have two arrays: val[0..N-1], representing the values of the items,
+Specifically, you have two array: val[0..N-1], representing the values of the items,
   and wt[0..N-1], indicating their weights.
 Additionally, you have a weight limit W for the backpack.
 The challenge is to determine the most valuable combination of items
@@ -83,7 +83,7 @@ def knapsack_tab(W, wt, val, n):
 # Time Complexity: O(n * W), n items and W weight
 # Space Complexity: O(W), tabulation table
 def knapsack_space_optimized(W, wt, val, n):
-    # 1D arrays to store rows
+    # 1D array to store rows
     prev = [0] * (W + 1)
     curr = [0] * (W + 1)
 

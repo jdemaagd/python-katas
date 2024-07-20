@@ -10,7 +10,7 @@ For e.g. [2, 3[4, 1, 2]] = 2 + 3 + (4 + 1 + 2) ^ 2
 """
 
 
-# Time complexity: O(n), where n is total elements in main and sub arrays
+# Time complexity: O(n), where n is total elements in main and sub array
 # Space complexity: O(d), where d is maximum depth of call stack
 def power_sum(array, power=1):
     total = 0

@@ -5,7 +5,7 @@ return the sorted array using Merge sort.
 
 Divide & Conquer Algorithm:
 Divide: split array in half until size of array is 1
-Conquer: merge sorted arrays
+Conquer: merge sorted array
 
 Stable Sorting Algorithm:
 Initial relative ordering is maintained between duplicates
@@ -33,7 +33,7 @@ def merge_sort(nums):
 
 # Time Complexity: O(n + m)
 # Space Complexity: O(n + m)
-def merge(left, right):     # sorted arrays
+def merge(left, right):     # sorted array
     result = []
     left_pointer = right_pointer = 0
 

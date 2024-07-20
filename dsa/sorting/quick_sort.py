@@ -13,7 +13,7 @@ decrement `j' until arr[j] < pivot
 swap arr[i] and arr[j]
 repeat until i >= j
 swap arr[i] and pivot
-Recursively apply quick sort to left and right sub-arrays
+Recursively apply quick sort to left and right sub-array
 """
 
 
