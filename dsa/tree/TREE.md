@@ -1,6 +1,6 @@
 # Trees
 
-# Terms
+## Terms
 
 - Child: can only have one parent
 - Parent:

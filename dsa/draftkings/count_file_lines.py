@@ -25,6 +25,6 @@ def count_lines_in_file(path):
     return line_count
 
 
-file_path = 'dsa/draftkings/count_file_lines.py'
+file_path = 'dsa2/draftkings/count_file_lines.py'
 total_lines = count_lines_in_file(file_path)
 print("Total number of lines:", total_lines)
