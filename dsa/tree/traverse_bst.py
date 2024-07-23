@@ -1,5 +1,3 @@
-from dsa.tree.node import Node
-
 """
 Traverse BST
 Write 4 instance methods for a Binary Search Tree class to traverse BST:
@@ -78,4 +76,5 @@ class BinarySearchTree:
             array.append(node.value)
 
         trav(current)
+
         return array
