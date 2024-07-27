@@ -1,9 +1,10 @@
 def print_tree(node):
     """Helper function to print the tree in level order."""
-    if not node:
-        return []
-
     result = []
+
+    if not node:
+        print(result)
+
     queue = [node]
 
     while queue:
@@ -18,4 +19,4 @@ def print_tree(node):
     while result and result[-1] is None:
         result.pop()
 
-    return result
+    print(result)
