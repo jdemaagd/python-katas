@@ -1,5 +1,6 @@
 from typing import List, Optional
 from dsa.tree.node import Node
+from dsa.tree.print_tree import print_tree
 
 """
 Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary
@@ -69,3 +70,16 @@ def build_tree2(self, preorder: List[int], inorder: List[int]) -> Optional[Node]
     root.right = build_tree(right_preorder, right_inorder)
 
     return root
+
+
+if __name__ == "__main__":
+    print("Construct BST from Preorder and Inorder Traversal")
+    preorder1 = [3, 9, 20, 15, 7]
+    inorder1 = [9, 3, 15, 20, 7]
+    tree1 = build_tree(None, preorder1, inorder1)
+    print(print_tree(tree1))    # [3, 9, 20, None, None, 15, 7]
+
+    preorder2 = [-1]
+    inorder2 = [-1]
+    tree2 = build_tree(None, preorder2, inorder2)
+    print(print_tree(tree2))    # [-1]
